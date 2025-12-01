@@ -35,8 +35,3 @@ jobs:
       - name: Lint code
         run: flake8 .
 
-
-      # 5. Lint code
-      - name: Lint code
-        run: flake8 app tests
-
