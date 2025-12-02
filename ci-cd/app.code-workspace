@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../app"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../terraform"
+		},
+		{
+			"path": "../tests"
+		},
+		{
+			"path": "../venv"
+		}
+	]
+}
