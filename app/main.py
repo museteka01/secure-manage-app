@@ -2,9 +2,10 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+# Mock data
 tasks = [
-    {"id": 1, "name": "Do laundry"},
-    {"id": 2, "name": "Write report"}
+    {"id": 1, "title": "Fix server", "status": "in-progress"},
+    {"id": 2, "title": "Deploy update", "status": "pending"},
 ]
 
 @app.route('/tasks', methods=['GET'])
@@ -25,3 +26,4 @@ if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
