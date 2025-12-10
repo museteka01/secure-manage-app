@@ -1,1 +1,2 @@
-return jsonify({"message": "Welcome to the Secure Task Manager!"})
+# In app/main.py, add temporarily:
+print("CI/CD pipeline test")
