@@ -1,2 +1,4 @@
-# In app/main.py, add temporarily:
-print("CI/CD pipeline test")
+# app/main.py
+
+def some_function():
+    return "Hello, World!"
