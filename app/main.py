@@ -1,4 +1,6 @@
-# app/main.py
+from fastapi import FastAPI
+from app.routers import health
 
-def some_function():
-    return "Hello, World!"
+app = FastAPI()
+
+app.include_router(health.router)

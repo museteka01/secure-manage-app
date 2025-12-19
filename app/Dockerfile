@@ -1,13 +1,12 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements-prod.txt .
+RUN pip install --no-cache-dir -r requirements-prod.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY app ./app
 
-COPY . .
+EXPOSE 8000
 
-EXPOSE 5000
-
-CMD ["python", "app/main.py"]
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
