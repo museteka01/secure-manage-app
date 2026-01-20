@@ -1,0 +1,32 @@
+{
+  "family": "devsecops-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "devsecops-container",
+      "image": "058841532049.dkr.ecr.us-east-1.amazonaws.com/devsecops-project-api:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "DATABASE_URL",
+          "value": "postgres://username:password@your-rds-endpoint:5432/dbname"
+        },
+        {
+          "name": "SECRET_KEY",
+          "value": "supersecret"
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024"
+}
+
