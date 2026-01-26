@@ -36,3 +36,9 @@ jobs:
         run: |
           pytest || echo "Skipping tests for now"
 
+      # 🔐 Dependency vulnerability scan
+      - name: Dependency vulnerability scan
+        run: |
+          pip install safety
+          safety check --full-report
+
