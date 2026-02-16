@@ -1,6 +1,5 @@
-.env
+*.pyc
 __pycache__/
-.pytest_cache/
-.coverage
-.DS_Store
 .vscode/
+*.coverage
+.pytest_cache/
